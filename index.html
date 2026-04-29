@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NCERT Science Hub | Class 6-10 | 2026-27</title>
+  <meta name="description" content="Comprehensive NCERT Science study portal for Class 6 to 10. All chapters, concepts, and resources aligned with the 2026-27 CBSE/NCERT syllabus." />
+  <meta name="keywords" content="NCERT Science, Class 6 Science, Class 7 Science, Class 8 Science, Class 9 Science, Class 10 Science, 2026-27 syllabus, CBSE" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Particles Background -->
+  <div class="particles-bg" id="particles-bg"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">⚗️</div>
+        <div class="logo-text">
+          <span class="logo-title">NCERT Science Hub</span>
+          <span class="logo-sub">2026–27 Syllabus</span>
+        </div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#classes" class="nav-link">Classes</a>
+        <a href="#chapters" class="nav-link">Chapters</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Academic Year 2026–27 • NCERT / CBSE Aligned
+      </div>
+      <h1 class="hero-title">
+        Explore Science<br />
+        <span class="gradient-text">Like Never Before</span>
+      </h1>
+      <p class="hero-subtitle">
+        Your complete study companion for NCERT Science — Class 6 to 10. All chapters, key concepts, and learning resources aligned with the latest 2026-27 syllabus.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Classes</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">62+</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">NEP</span>
+          <span class="stat-label">2020 Aligned</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#classes" class="btn btn-primary">
+          <span>Start Learning</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#chapters" class="btn btn-secondary">Browse Chapters</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="science-sphere">
+        <div class="sphere-ring ring-1"></div>
+        <div class="sphere-ring ring-2"></div>
+        <div class="sphere-ring ring-3"></div>
+        <div class="sphere-center">🔬</div>
+        <div class="orbit-dot dot-1">⚡</div>
+        <div class="orbit-dot dot-2">🧬</div>
+        <div class="orbit-dot dot-3">🌍</div>
+        <div class="orbit-dot dot-4">⚛️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Section -->
+  <section class="classes-section" id="classes">
+    <div class="section-header">
+      <div class="section-tag">Choose Your Class</div>
+      <h2 class="section-title">Select Your Grade</h2>
+      <p class="section-desc">Navigate to your class and explore all chapters from the NCERT 2026-27 Science syllabus</p>
+    </div>
+    <div class="classes-grid">
+      <div class="class-card" data-class="6" onclick="showChapters(6)">
+        <div class="class-card-glow"></div>
+        <div class="class-icon-wrap">
+          <div class="class-emoji">🌱</div>
+        </div>
+        <div class="class-info">
+          <span class="class-label">Class</span>
+          <span class="class-number">VI</span>
+          <span class="class-book">Curiosity</span>
+        </div>
+        <div class="class-meta">
+          <span class="chapter-count">12 Chapters</span>
+          <span class="class-tag">New Textbook</span>
+        </div>
+        <div class="class-topics">
+          <span class="topic-chip">Living World</span>
+          <span class="topic-chip">Magnets</span>
+          <span class="topic-chip">Materials</span>
+          <span class="topic-chip">Space</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="class-card" data-class="7" onclick="showChapters(7)">
+        <div class="class-card-glow"></div>
+        <div class="class-icon-wrap">
+          <div class="class-emoji">🔭</div>
+        </div>
+        <div class="class-info">
+          <span class="class-label">Class</span>
+          <span class="class-number">VII</span>
+          <span class="class-book">Curiosity</span>
+        </div>
+        <div class="class-meta">
+          <span class="chapter-count">12 Chapters</span>
+          <span class="class-tag">New Textbook</span>
+        </div>
+        <div class="class-topics">
+          <span class="topic-chip">Electricity</span>
+          <span class="topic-chip">Metals</span>
+          <span class="topic-chip">Light</span>
+          <span class="topic-chip">Adolescence</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="class-card" data-class="8" onclick="showChapters(8)">
+        <div class="class-card-glow"></div>
+        <div class="class-icon-wrap">
+          <div class="class-emoji">⚗️</div>
+        </div>
+        <div class="class-info">
+          <span class="class-label">Class</span>
+          <span class="class-number">VIII</span>
+          <span class="class-book">Curiosity</span>
+        </div>
+        <div class="class-meta">
+          <span class="chapter-count">13 Chapters</span>
+          <span class="class-tag">New Textbook</span>
+        </div>
+        <div class="class-topics">
+          <span class="topic-chip">Microorganisms</span>
+          <span class="topic-chip">Forces</span>
+          <span class="topic-chip">Light</span>
+          <span class="topic-chip">Matter</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="class-card" data-class="9" onclick="showChapters(9)">
+        <div class="class-card-glow"></div>
+        <div class="class-icon-wrap">
+          <div class="class-emoji">⚛️</div>
+        </div>
+        <div class="class-info">
+          <span class="class-label">Class</span>
+          <span class="class-number">IX</span>
+          <span class="class-book">Integrated Science</span>
+        </div>
+        <div class="class-meta">
+          <span class="chapter-count">12 Chapters</span>
+          <span class="class-tag">Integrated</span>
+        </div>
+        <div class="class-topics">
+          <span class="topic-chip">Motion</span>
+          <span class="topic-chip">Atoms</span>
+          <span class="topic-chip">Cell</span>
+          <span class="topic-chip">Sound</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="class-card featured" data-class="10" onclick="showChapters(10)">
+        <div class="class-card-glow"></div>
+        <div class="class-icon-wrap">
+          <div class="class-emoji">🏆</div>
+        </div>
+        <div class="class-info">
+          <span class="class-label">Class</span>
+          <span class="class-number">X</span>
+          <span class="class-book">Board Exam Year</span>
+        </div>
+        <div class="class-meta">
+          <span class="chapter-count">13 Chapters</span>
+          <span class="class-tag">Board Exam</span>
+        </div>
+        <div class="class-topics">
+          <span class="topic-chip">Reactions</span>
+          <span class="topic-chip">Life Processes</span>
+          <span class="topic-chip">Light</span>
+          <span class="topic-chip">Electricity</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapters Section -->
+  <section class="chapters-section" id="chapters">
+    <div class="section-header">
+      <div class="section-tag">Full Syllabus</div>
+      <h2 class="section-title">All Chapters</h2>
+      <p class="section-desc">Browse all chapters across Class 6–10. Click a class tab to filter.</p>
+    </div>
+
+    <!-- Class Filter Tabs -->
+    <div class="chapter-tabs">
+      <button class="tab-btn active" onclick="filterChapters(6, this)" id="tab-6">Class 6</button>
+      <button class="tab-btn" onclick="filterChapters(7, this)" id="tab-7">Class 7</button>
+      <button class="tab-btn" onclick="filterChapters(8, this)" id="tab-8">Class 8</button>
+      <button class="tab-btn" onclick="filterChapters(9, this)" id="tab-9">Class 9</button>
+      <button class="tab-btn" onclick="filterChapters(10, this)" id="tab-10">Class 10</button>
+    </div>
+
+    <!-- Class Info Banner -->
+    <div class="class-info-banner" id="class-info-banner">
+      <div class="banner-left">
+        <div class="banner-emoji" id="banner-emoji">🌱</div>
+        <div class="banner-text">
+          <h3 id="banner-class-name">Class 6 – Curiosity</h3>
+          <p id="banner-class-desc">New NCERT textbook aligned with NEP 2020 & NCF-SE 2023. Focus on inquiry-based learning and real-world applications.</p>
+        </div>
+      </div>
+      <div class="banner-stats">
+        <div class="banner-stat">
+          <span class="bs-num" id="banner-chapter-count">12</span>
+          <span class="bs-label">Chapters</span>
+        </div>
+        <div class="banner-stat">
+          <span class="bs-num" id="banner-subject">Science</span>
+          <span class="bs-label">Subject</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapters Grid -->
+    <div class="chapters-grid" id="chapters-grid"></div>
+  </section>
+
+  <!-- Subject Legend -->
+  <section class="legend-section">
+    <div class="legend-container">
+      <h3 class="legend-title">Subject Color Guide</h3>
+      <div class="legend-items">
+        <div class="legend-item">
+          <div class="legend-dot physics"></div>
+          <span>Physics</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot chemistry"></div>
+          <span>Chemistry</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot biology"></div>
+          <span>Biology</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot earth"></div>
+          <span>Earth Science</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot general"></div>
+          <span>General Science</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Features Section -->
+  <section class="about-section" id="about">
+    <div class="section-header">
+      <div class="section-tag">Why Us?</div>
+      <h2 class="section-title">Built for Students</h2>
+      <p class="section-desc">Everything you need to master NCERT Science for the 2026-27 academic session</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Complete Syllabus</h3>
+        <p>All chapters from Class 6 to 10 as per the latest NCERT 2026-27 curriculum including the new "Curiosity" textbooks.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>NEP 2020 Aligned</h3>
+        <p>Content aligned with the National Education Policy 2020 and NCF-SE 2023, focusing on conceptual clarity and competency-based learning.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔬</div>
+        <h3>Integrated Science</h3>
+        <p>Physics, Chemistry, Biology, and Earth Science presented in an integrated manner to help you see connections between disciplines.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Quick Navigation</h3>
+        <p>Jump to any class and chapter instantly. Clean, fast, and distraction-free learning interface designed for focused study.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Board Exam Ready</h3>
+        <p>Special emphasis on Class 10 chapters — the most important year. Chapters are tagged and organized for effective exam preparation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Real-World Focus</h3>
+        <p>Modern curriculum emphasizes real-world applications, environmental awareness, and scientific inquiry over rote memorization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">⚗️ NCERT Science Hub</div>
+        <p class="footer-tagline">Empowering students with knowledge for a brighter future.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <a href="#" onclick="filterChapters(6, document.getElementById('tab-6')); scrollToChapters()">Class 6</a>
+          <a href="#" onclick="filterChapters(7, document.getElementById('tab-7')); scrollToChapters()">Class 7</a>
+          <a href="#" onclick="filterChapters(8, document.getElementById('tab-8')); scrollToChapters()">Class 8</a>
+          <a href="#" onclick="filterChapters(9, document.getElementById('tab-9')); scrollToChapters()">Class 9</a>
+          <a href="#" onclick="filterChapters(10, document.getElementById('tab-10')); scrollToChapters()">Class 10</a>
+        </div>
+        <div class="footer-col">
+          <h4>Subjects</h4>
+          <a href="#">Physics</a>
+          <a href="#">Chemistry</a>
+          <a href="#">Biology</a>
+          <a href="#">Earth Science</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="https://ncert.nic.in" target="_blank" rel="noopener">NCERT Official</a>
+          <a href="https://cbseacademic.nic.in" target="_blank" rel="noopener">CBSE Academic</a>
+          <a href="#">Syllabus PDF</a>
+          <a href="#">NCERT Books</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NCERT Science Hub. Educational content based on NCERT 2026-27 syllabus. Not affiliated with NCERT or CBSE.</p>
+    </div>
+  </footer>
+
+  <!-- Chapter Modal -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="chapter-modal" id="chapter-modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <div class="modal-chapter-num" id="modal-chapter-num">Chapter 1</div>
+        <h2 class="modal-title" id="modal-title">Chapter Title</h2>
+        <div class="modal-tags" id="modal-tags"></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>📌 Overview</h3>
+          <p id="modal-overview">Chapter overview will appear here.</p>
+        </div>
+        <div class="modal-section">
+          <h3>🎯 Key Concepts</h3>
+          <ul class="concept-list" id="modal-concepts"></ul>
+        </div>
+        <div class="modal-section">
+          <h3>🔗 External Resources</h3>
+          <div class="resource-links">
+            <a href="https://ncert.nic.in" target="_blank" class="resource-link">
+              <span>📖</span> NCERT Official Textbook
+            </a>
+            <a href="https://diksha.gov.in" target="_blank" class="resource-link">
+              <span>🎥</span> DIKSHA Video Lessons
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

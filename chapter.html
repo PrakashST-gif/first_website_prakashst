@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="page-title">Chapter | NCERT Science Hub</title>
+  <meta name="description" content="NCERT Science Chapter — PPT, Notes, Solutions, Questions, Worksheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="chapter.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">⚗️</div>
+        <div class="logo-text">
+          <span class="logo-title">NCERT Science Hub</span>
+          <span class="logo-sub">2026–27 Syllabus</span>
+        </div>
+      </a>
+      <div class="breadcrumb" id="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="#" id="bc-class">Class 6</a>
+        <span>›</span>
+        <span id="bc-chapter">Chapter 1</span>
+      </div>
+      <a href="index.html" class="btn btn-secondary" style="padding:8px 20px;font-size:0.85rem;">← All Chapters</a>
+    </div>
+  </nav>
+
+  <!-- CHAPTER HEADER -->
+  <div class="chapter-header" id="chapter-header">
+    <div class="ch-header-bg"></div>
+    <div class="ch-header-content">
+      <div class="ch-meta-row">
+        <span class="ch-class-badge" id="ch-class-badge">Class 6</span>
+        <span class="ch-num-badge" id="ch-num-badge">Chapter 1</span>
+        <span class="ch-subject-badge-hdr" id="ch-subject-badge">🔬 General</span>
+      </div>
+      <h1 class="ch-main-title" id="ch-main-title">Chapter Title</h1>
+      <p class="ch-main-desc" id="ch-main-desc">Chapter description goes here.</p>
+      <div class="ch-header-actions">
+        <button class="ch-nav-btn" id="prev-chapter-btn" onclick="navigateChapter(-1)">← Previous</button>
+        <button class="ch-nav-btn" id="next-chapter-btn" onclick="navigateChapter(1)">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar-sticky" id="tab-bar">
+    <div class="tab-bar-inner">
+      <button class="ch-tab active" onclick="switchTab('ppt', this)" id="tab-ppt">📊 PPT Slides</button>
+      <button class="ch-tab" onclick="switchTab('notes', this)" id="tab-notes">📝 Key Notes</button>
+      <button class="ch-tab" onclick="switchTab('solutions', this)" id="tab-solutions">✅ Solutions</button>
+      <button class="ch-tab" onclick="switchTab('questions', this)" id="tab-questions">🎯 Questions</button>
+      <button class="ch-tab" onclick="switchTab('worksheet', this)" id="tab-worksheet">📋 Worksheet</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="chapter-main" id="chapter-main">
+
+    <!-- ===== PPT TAB ===== -->
+    <div class="tab-content active" id="content-ppt">
+      <div class="ppt-container">
+        <div class="ppt-viewer">
+          <div class="ppt-slide-area" id="ppt-slide-area"></div>
+          <div class="ppt-controls">
+            <button class="ppt-btn" id="ppt-prev" onclick="pptNav(-1)">‹ Prev</button>
+            <span class="ppt-counter" id="ppt-counter">1 / 8</span>
+            <button class="ppt-btn" id="ppt-next" onclick="pptNav(1)">Next ›</button>
+          </div>
+        </div>
+        <div class="ppt-thumbnails" id="ppt-thumbnails"></div>
+      </div>
+      <div class="ppt-download-bar">
+        <button class="btn btn-primary" onclick="printPPT()" style="gap:8px;">🖨️ Print / Save as PDF</button>
+        <p class="ppt-print-tip">Use your browser's Print function (Ctrl+P) and select "Save as PDF"</p>
+      </div>
+    </div>
+
+    <!-- ===== NOTES TAB ===== -->
+    <div class="tab-content" id="content-notes">
+      <div class="notes-container">
+        <div class="notes-header">
+          <h2 id="notes-title">Key Notes</h2>
+          <button class="btn btn-secondary" onclick="window.print()" style="padding:8px 20px;font-size:0.85rem;">🖨️ Print Notes</button>
+        </div>
+        <div class="notes-body" id="notes-body"></div>
+      </div>
+    </div>
+
+    <!-- ===== SOLUTIONS TAB ===== -->
+    <div class="tab-content" id="content-solutions">
+      <div class="solutions-container">
+        <div class="solutions-header">
+          <h2 id="solutions-title">NCERT Solutions</h2>
+          <p class="solutions-sub">All textbook exercise questions with detailed answers</p>
+        </div>
+        <div class="solutions-body" id="solutions-body"></div>
+      </div>
+    </div>
+
+    <!-- ===== QUESTIONS TAB ===== -->
+    <div class="tab-content" id="content-questions">
+      <div class="questions-container">
+        <div class="questions-header">
+          <h2>Competency-Based Questions</h2>
+          <p class="questions-sub">Filter by type and marks</p>
+        </div>
+        <div class="q-filter-bar">
+          <div class="q-filter-group">
+            <span class="filter-label">Type:</span>
+            <button class="q-filter active" onclick="filterQ('type','all',this)">All</button>
+            <button class="q-filter" onclick="filterQ('type','mcq',this)">MCQ</button>
+            <button class="q-filter" onclick="filterQ('type','ar',this)">Assertion-Reason</button>
+            <button class="q-filter" onclick="filterQ('type','activity',this)">Activity</button>
+            <button class="q-filter" onclick="filterQ('type','picture',this)">Picture</button>
+            <button class="q-filter" onclick="filterQ('type','casestudy',this)">Case Study</button>
+            <button class="q-filter" onclick="filterQ('type','short',this)">Short Answer</button>
+            <button class="q-filter" onclick="filterQ('type','long',this)">Long Answer</button>
+          </div>
+          <div class="q-filter-group">
+            <span class="filter-label">Marks:</span>
+            <button class="q-filter active" onclick="filterQ('marks','all',this)">All</button>
+            <button class="q-filter" onclick="filterQ('marks','1',this)">1 Mark</button>
+            <button class="q-filter" onclick="filterQ('marks','2',this)">2 Marks</button>
+            <button class="q-filter" onclick="filterQ('marks','3',this)">3 Marks</button>
+            <button class="q-filter" onclick="filterQ('marks','4',this)">4 Marks</button>
+            <button class="q-filter" onclick="filterQ('marks','5',this)">5 Marks</button>
+          </div>
+        </div>
+        <div class="questions-body" id="questions-body"></div>
+      </div>
+    </div>
+
+    <!-- ===== WORKSHEET TAB ===== -->
+    <div class="tab-content" id="content-worksheet">
+      <div class="worksheet-container" id="worksheet-container">
+        <div class="worksheet-header-bar">
+          <button class="btn btn-primary" onclick="printWorksheet()">🖨️ Print Worksheet</button>
+          <button class="btn btn-secondary" onclick="toggleAnswers()">👁️ Toggle Answer Key</button>
+        </div>
+        <div class="worksheet-paper" id="worksheet-paper">
+          <div class="ws-school-header">
+            <div class="ws-logo">⚗️</div>
+            <div class="ws-school-info">
+              <h2 class="ws-school-name">NCERT Science Hub</h2>
+              <p class="ws-sub">Academic Year 2026–27 | Worksheet</p>
+            </div>
+          </div>
+          <div class="ws-meta">
+            <div class="ws-meta-row">
+              <span><strong>Class:</strong> <span id="ws-class">VI</span></span>
+              <span><strong>Chapter:</strong> <span id="ws-chapter-name">-</span></span>
+              <span><strong>Max Marks:</strong> 20</span>
+              <span><strong>Time:</strong> 45 Min</span>
+            </div>
+            <div class="ws-student-row">
+              <span>Name: ___________________________</span>
+              <span>Roll No: _________</span>
+              <span>Date: _____________</span>
+            </div>
+          </div>
+          <div class="ws-instructions">
+            <strong>General Instructions:</strong>
+            <ol>
+              <li>All questions are compulsory.</li>
+              <li>Read each question carefully before answering.</li>
+              <li>Marks are indicated against each section.</li>
+            </ol>
+          </div>
+          <div id="worksheet-body"></div>
+          <div class="ws-answer-key" id="ws-answer-key" style="display:none;">
+            <h3>Answer Key</h3>
+            <div id="ws-answers"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer" style="margin-top:4rem;">
+    <div class="footer-bottom"><p>© 2026 NCERT Science Hub | Content for Class 6–10, 2026–27 Syllabus</p></div>
+  </footer>
+
+  <!-- Data files loaded by order of dependency -->
+  <script src="data-class6.js"></script>
+  <script src="data-class7.js"></script>
+  <script src="data-class8.js"></script>
+  <script src="data-class9.js"></script>
+  <script src="data-class10.js"></script>
+  <script src="chapter.js"></script>
+</body>
+</html>
